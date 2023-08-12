@@ -3,7 +3,7 @@
 # \masm32\bin\Link /SUBSYSTEM:CONSOLE main.obj
 # main.exe
 
-using "C:\Users\nicka\OneDrive\Documents\Programming Projects\C# Projects\Console Apps\DeezLang\DeezLang\std.deez"
+using "INPUT STANDARD LIBARY PATH HERE!!!"
 
 define exitcode 0
 
