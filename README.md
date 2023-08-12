@@ -4,12 +4,6 @@
 
 A low level compiled stack based language. DeezLang compiles to MASM32 assembly, which can then be compiled to a native executable.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
 ## Installation
 
  - Create a new C# console application.
@@ -61,3 +55,14 @@ macro stdout
   "call StdOut"
 end
 ```
+
+## To Be Implemented
+
+DeezLang is currently in development and I hope to add a TON of new features such as:
+
+ - Procedures/Functions
+ - A `goto` Keyword With Labels
+ - A port of the standard C libary.
+ - Structers/Classes
+
+Keep in mind DeezLang was created in 3 days for fun, as I am only 13 years old.
