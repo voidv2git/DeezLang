@@ -1,11 +1,17 @@
-﻿namespace DeezLang
+namespace DeezLang
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string inputFile = "C:\\Users\\nicka\\OneDrive\\Documents\\Programming Projects\\C# Projects\\Console Apps\\DeezLang\\DeezLang\\main.deez";
-            string outputFile = "C:\\Users\\nicka\\OneDrive\\Documents\\Programming Projects\\C# Projects\\Console Apps\\DeezLang\\DeezLang\\main.asm";
+            if (args.Length != 3)
+            {
+                Output.Error("null", 0, Output.ErrorType.UsageError, "[USAGE] DeezLang [inputFile] [outputFile]");
+            }
+
+            string inputFile = args[1];
+            string outputFile = args[2];
+
             string source = "";
 
             try
