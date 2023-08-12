@@ -1,0 +1,11 @@
+﻿# Building Instructions
+# \masm32\bin\ml /c /Zd /coff main.asm
+# \masm32\bin\Link /SUBSYSTEM:CONSOLE main.obj
+# main.exe
+
+using "C:\Users\nicka\OneDrive\Documents\Programming Projects\C# Projects\Console Apps\DeezLang\DeezLang\std.deez"
+
+define exitcode 0
+
+"Hello, World!\n" stdout
+exitcode ptr exit

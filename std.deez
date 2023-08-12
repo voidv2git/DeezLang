@@ -1,0 +1,31 @@
+﻿const TRUE 1
+const FALSE 0
+const NULL 0
+
+const sizeof(byte) 8
+const sizeof(int) 8
+
+macro stdout "call StdOut"      end
+macro stderr "call StdErr"      end
+macro stdin  "call StdIn"       end
+macro exit   "call ExitProcess" end
+
+macro put
+	"pop eax"
+	"print str$(eax), 13, 10"
+end
+
+macro free
+	"pop eax"
+	".while eax != 0"
+	"pop eax"
+	".endw"
+end
+
+macro dump
+	"pop eax"
+	".while eax != 0"
+	"print str$(eax), 13, 10"
+	"pop eax"
+	".endw"
+end
