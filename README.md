@@ -1,5 +1,7 @@
 # DeezLang
 
+![alt text](Logo.png)
+
 ## Description
 
 A low level compiled stack based language. DeezLang compiles to MASM32 assembly, which can then be compiled to a native executable.
