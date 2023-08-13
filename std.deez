@@ -1,17 +1,45 @@
-﻿const TRUE 1
-const FALSE 0
-const NULL 0
+const TRUE                  1
+const FALSE                 0
+const NULL                  0
+const INVALID_HANDLE_VALUE -1
+const FILE_READ_DATA        1
+const FILE_SHARE_WRITE      2
 
-const sizeof(byte) 8
-const sizeof(int) 8
+macro stdout      "call StdOut"      end
+macro stderr      "call StdErr"      end
+macro stdin       "call StdIn"       end
+macro exit        "call ExitProcess" end
+macro closehandle "call CloseHandle" end
 
-macro stdout "call StdOut"      end
-macro stderr "call StdErr"      end
-macro stdin  "call StdIn"       end
-macro exit   "call ExitProcess" end
+macro createfilea
+	"pop eax" # mode
+	"pop ebx" # file path
+	"push 0"
+	"push FILE_ATTRIBUTE_NORMAL"
+	"push OPEN_EXISTING"
+	"push 0"
+	"push 0"
+	"push eax"
+	"push ebx"
+	"call CreateFileA"
+	"push eax"
+end
+
+macro readfile
+	"pop eax" # bytes read
+	"pop ebx" # size
+	"pop ecx" # contents
+	"pop edx" # handle
+	"push 0"
+	"push eax"
+	"push ebx"
+	"push ecx"
+	"push [edx]"
+	"call ReadFile"
+end
 
 macro put
-	"pop eax"
+	"pop eax" # value
 	"print str$(eax), 13, 10"
 end
 
